@@ -28,12 +28,14 @@
     "@bryntum/gantt-react": "5.3.3",
     "@types/node": "12.6.8",
     "@types/react-dom": "16.8.5",
+    "lodash": "^4.17.21",
     "react": "~16.14.0",
     "react-dom": "~16.14.0",
     "react-scripts": "~3.4.4",
     "typescript": "~4.9.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.194",
     "babel-preset-react-app": "npm:@bryntum/babel-preset-react-app@10.0.0",
     "postinstall": "~0.7.4",
     "sass": "~1.42.0"

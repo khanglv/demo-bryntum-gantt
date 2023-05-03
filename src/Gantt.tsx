@@ -5,7 +5,7 @@ import Task from "./common/Task";
 import { columns } from "./common/columns";
 import { useFetchJson } from "./utillity/hook";
 import LoadingSpinner from "./common/loading";
-import { optimizeData } from "./utillity";
+import { optimizeData, rootNode } from "./utillity";
 
 // ,
 // { type : 'startdate' },
@@ -36,16 +36,13 @@ export default function Gantt() {
     "data/data-page-4.json",
     "data/data-page-5.json",
   ]);
-  console.log(data, " data đse");
 
   const [delayed, setDelayed] = useState<boolean>(true);
   const [dataGantt, setDataGantt] = useState<any>();
 
   useEffect(() => {
     if (data && data?.length) {
-      console.log("vào ");
-      const dataTmp = optimizeData(data);
-      console.log(dataTmp, " dataTmp");
+      const dataTmp = rootNode(data);
       setDataGantt(dataTmp);
       setDelayed(false);
     }
@@ -54,7 +51,7 @@ export default function Gantt() {
   const ganttConfig: BryntumGanttProps = {
     project: {
       autoLoad: true,
-      //   tasksData: dataGantt,
+      // tasksData: dataGantt, handle dataa
       transport: {
         load: {
           url: "data/launch-saas.json",
