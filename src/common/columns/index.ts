@@ -5,7 +5,7 @@ import "./OriginalDuration"
 
 const columns = [
     { type: "wbs" },
-    { type: "name" },
+    { type: "name", width: 200 },
     { type: "activitynamecolumn" },
     {type: "originalduarationcolumn"}
 ]
